@@ -11,7 +11,7 @@ using System;
 using System.Text;
 
 namespace ProjetoApi
-{
+{ 
     public class Startup
     {
         public Startup(IConfiguration configuration)
