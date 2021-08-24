@@ -3,6 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using DataAccess.Context;
 using DataAccess.Interfaces;
 using DataAccess.Repositories;
+using Core.Interfaces;
+using Core;
 
 namespace Api.Config
 {
@@ -19,6 +21,14 @@ namespace Api.Config
 
             #endregion
 
+            #region Core Services
+
+            services.AddScoped<ICreateUsers, CreateUsers>();
+            //services.AddScoped<IUpdateUsers, UpdateUsers>();
+            //services.AddScoped<IDeleteUsers, DeleteUsers>();
+            services.AddScoped<IGetAllUsers, GetAllUsers>();
+
+            #endregion
 
         }
     }

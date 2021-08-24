@@ -1,9 +1,9 @@
-﻿
-namespace DataAccess.Context
+﻿namespace DataAccess.Context
 {
-using System;
-using System.Data;
-using System.Threading.Tasks;
+    using System;
+    using System.Data;
+    using System.Threading.Tasks;
+
     public class DataContext : IDataContext
     {
         private readonly string _connectionString;
