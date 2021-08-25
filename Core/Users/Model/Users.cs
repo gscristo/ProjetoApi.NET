@@ -34,6 +34,7 @@ namespace Core.Users.Model
             // return new Users 
             return new DataAccess.Entities.Users
             {
+                UsersId = users.UsersId,
                 Usuario = users.Usuario,
                 Email = users.Email,
                 Senha = users.Senha

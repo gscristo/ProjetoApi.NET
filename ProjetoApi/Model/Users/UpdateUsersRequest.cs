@@ -12,19 +12,17 @@ namespace Api.Model
         public static implicit operator Core.Users.Model.Users(UpdateUsersRequest updateUsersRequest)
         {
             if (updateUsersRequest == null)
-            {
                 return null;
-            }
-            else
-            {
-                return new Core.Users.Model.Users
-                {
-                    UsersId = updateUsersRequest.UsersId,
-                    Usuario = updateUsersRequest.Usuario,
-                    Email = updateUsersRequest.Email,
-                    Senha = updateUsersRequest.Senha
-                };
-            }
+
+
+            return new Core.Users.Model.Users
+
+            {   UsersId = updateUsersRequest.UsersId,
+                Usuario = updateUsersRequest.Usuario,
+                Email = updateUsersRequest.Email,
+                Senha = updateUsersRequest.Senha
+            };
+
         }
     }
 }
