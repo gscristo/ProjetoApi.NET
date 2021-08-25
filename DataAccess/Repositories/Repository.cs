@@ -67,7 +67,7 @@ namespace DataAccess.Repositories
             return result;
         }
 
-        public async Task<bool> DeleteAsync(T entity, IDbTransaction transaction, int? commandTimeout = null)
+        public async Task<bool> DeleteAsync(T entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             var result = await _dataContext.Connection.DeleteAsync(entity, transaction, commandTimeout);
 
@@ -75,6 +75,7 @@ namespace DataAccess.Repositories
 
             return result;
         }
+
         public async Task<PaginationResponse<T>> GetAllAsyncPagination(int pageSize, int pageIndex, string sort, string direction, string tableName = "")
         {
             string table = typeof(T).Name;

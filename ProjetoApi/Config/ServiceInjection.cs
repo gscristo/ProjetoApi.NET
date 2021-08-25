@@ -6,6 +6,7 @@ using DataAccess.Repositories;
 using Core.Interfaces;
 using Core;
 using Core.Users;
+using Core.Users.Interfaces;
 
 namespace Api.Config
 {
@@ -26,8 +27,9 @@ namespace Api.Config
 
             services.AddScoped<ICreateUsers, CreateUsers>();
             services.AddScoped<IUpdateUsers, UpdateUsers>();
-            //services.AddScoped<IDeleteUsers, DeleteUsers>();
+            services.AddScoped<IDeleteUsers, DeleteUsers>();
             services.AddScoped<IGetAllUsers, GetAllUsers>();
+            services.AddScoped<IGetUsersById, GetUsersById>();
 
             #endregion
 
